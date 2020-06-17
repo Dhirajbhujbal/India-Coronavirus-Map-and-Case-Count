@@ -38,8 +38,8 @@ class AppHeader extends Component {
                         <hr />
                         <div onClick={ () => this.closeDrawer() } className='nav-links'>
                             <Link to="/">Covid-19 Case Count</Link>
-                            <Link to='/news'>News</Link>
-                            <Link to='/about-us'>About US</Link>
+                            {/* <Link to='/news'>News</Link>
+                            <Link to='/about-us'>About US</Link> */}
                             {/* <Link to='/contact'>Contact</Link>
                             <Link to='/about-us'>About US</Link> */}
                         </div>
