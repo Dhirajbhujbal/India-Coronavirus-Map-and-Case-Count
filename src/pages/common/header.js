@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NavigationBar from './navigation-bar';
 import { withRouter, Link } from 'react-router-dom';
 import menuPng from '../../assets/menu.png';
+import dhirajImg from '../../assets/dhiraj.png';
 
 class AppHeader extends Component {
 
@@ -29,15 +30,15 @@ class AppHeader extends Component {
                     <div className='hamburger-item' >
                         <div className='profile-mg'>
                             <div>
-                                <img alt='dhiraj.bhujbal.img' src='https://scontent.fpnq7-1.fna.fbcdn.net/v/t1.0-9/67138449_2277695688974706_6795887681143308288_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=Yjla4_k2PWsAX-wvSbc&_nc_ht=scontent.fpnq7-1.fna&oh=ed741dc9dc7750470c50bae579dbf544&oe=5F0B958B'/>
+                                <img alt='dhiraj.bhujbal.img' src={dhirajImg}/>
                             </div>
                             <div>
-                                 <p>Dhiraj Bhujbal</p>
+                                 <p>Devloped by : Dhiraj Bhujbal</p>
                             </div>
                         </div>
                         <hr />
                         <div onClick={ () => this.closeDrawer() } className='nav-links'>
-                            <Link to="/">Covid-19 Case Count</Link>
+                            <Link to="/">Home</Link>
                             {/* <Link to='/news'>News</Link>
                             <Link to='/about-us'>About US</Link> */}
                             {/* <Link to='/contact'>Contact</Link>

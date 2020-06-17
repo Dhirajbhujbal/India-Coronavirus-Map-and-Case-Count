@@ -5,6 +5,7 @@ import { HttpApiService } from '../../api/http-api';
 export class Home extends Component {
     
     httpApiServObj = new HttpApiService();
+    myRef= []
     constructor() {
         super();
         this.state = {
@@ -18,6 +19,16 @@ export class Home extends Component {
             this.setState({
                 countryData: d.statewise.slice(0,1),
                 stateWiseData: d.statewise.slice(1)
+            }, () => {
+                console.log(this.myRef)
+                this.myRef.map((e) => {
+                    e.addEventListener('touchstart', () => {
+                        e.classList.add('touchClass')
+                    })
+                    e.addEventListener('touchend', () => {
+                        e.classList.remove('touchClass')
+                    })
+                })
             })
         )
     }
@@ -52,7 +63,7 @@ export class Home extends Component {
                 <div className='state-list'>
                 {
                     this.state.stateWiseData && this.state.stateWiseData.map( (state) => {
-                    return <div className={'tiled-state'} onClick={ () => this.navigateUrl(state)}>
+                    return <div ref={(e) => this.myRef.push(e) } className={'tiled-state'} onClick={ () => this.navigateUrl(state)}>
                        <center><h1>{state.state}</h1></center> 
                        <center> <table>
                             <tbody>

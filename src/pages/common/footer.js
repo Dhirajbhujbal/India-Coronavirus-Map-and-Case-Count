@@ -5,7 +5,7 @@ export class AppFooter extends Component {
         return (
             <div className='appFooter'>
                <div>
-                    <p>Contact : dhiraj.bhujbal1994@gmail.com</p> 
+                    <p>Email : dhiraj.bhujbal1994@gmail.com</p> 
                     <p>Mobile : 9975956792</p>
                </div>
             </div>
