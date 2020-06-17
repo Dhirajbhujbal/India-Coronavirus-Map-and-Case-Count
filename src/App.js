@@ -56,7 +56,7 @@ export class App extends Component {
           <AppLayout exact path='/news'showNav={false}  component={News} />
           <AppLayout exact path='/news/:id' showNav={true} component={UserDetails} />
           <AppLayout exact path='/contact' showNav={true} component={Contact} />
-          <AppLayout exact path='/state/:state' showNav={true} component={StateComponent} />
+          <AppLayout exact path='/state/:state' showNav={false} component={StateComponent} />
           <AppLayout exact path='/employee-details/:employeeName' showNav={false} component={UserDetails}/>
           </Switch>
         </Suspense>
