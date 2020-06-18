@@ -163,7 +163,7 @@ hr {
   background: transparent;
   border-top: solid 2px;
   border-radius: 10px;
-  z-index: 3;
+  z-index: 1;
   top:30px
 }
 
@@ -217,7 +217,7 @@ hr {
   margin-bottom: 5%;
   /* background-color: violet; */
   overflow: auto;
-  min-height: 100vh;
+  min-height: 50vh;
 }
 
 .noNav {
@@ -351,7 +351,9 @@ hr {
 }
 
 .tiled-state table td {
-  padding: 20px;
+  padding: 10px;
+  font-size: larger;
+  font-weight: bold;
 }
 
 .state-list-table {
@@ -504,6 +506,25 @@ p[color="gray"], td[color="gray"] {
   color: gray;
 }
 
+th, td { white-space: nowrap;}
+
+.social-media {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.social-media  img{
+  height: 30px;
+  background: none;
+  margin-right: 10px;
+  /* width: 100px; */
+}
+
+.state-details-container {
+  display: flex;
+  overflow: scroll;
+}
+
 @media only screen and (max-width: 600px) {
   .container {
     top:70px;
@@ -565,6 +586,14 @@ p[color="gray"], td[color="gray"] {
     justify-content: flex-end;
 
   }
+
+  .state-list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    overflow: scroll;
+    margin-right: 20px;
+  } 
 
   @media(hover: hover) and (pointer: fine) {
     .tiled-state:hover {

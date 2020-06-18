@@ -51,18 +51,20 @@ export class StateComponent extends Component {
                         active={stateData.active}
                         recovered={stateData.recovered}
                         deaths={stateData.deaths} />
-            </div>  </React.Fragment>}
-                    {
+            </div>  
+            </React.Fragment>
+            }
+            <div className='state-details-container'>        {
 
                         this.state.districtData && this.getSortedState().map( (districtName) => {
                             const distData = this.state.districtData[districtName];
                             return (
                                 <div className='news-block district'>
-                                    <div className='news-block-1'>
+                                    {/* <div className='news-block-1'>
                                         <div>
                                             {new Date().toDateString()} 
                                         </div>                        
-                                    </div>
+                                    </div> */}
                                     <div className='state-details-2'>
                                         <div>
                                             <h2>{districtName}</h2>
@@ -80,7 +82,7 @@ export class StateComponent extends Component {
                         })
 
                     }
-            
+            </div>
             </React.Fragment>
         )
     }
