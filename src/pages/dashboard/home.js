@@ -14,24 +14,23 @@ export class Home extends Component {
         }
     }
 
-    componentDidMount() {
-        this.httpApiServObj.getCovidCountStateWise().then( (d) => 
-            this.setState({
-                countryData: d.statewise.slice(0,1),
-                stateWiseData: d.statewise.slice(1)
-            }, () => {
-                console.log(this.myRef)
-                this.myRef.map((e) => {
-                    e.addEventListener('touchstart', () => {
-                        e.classList.add('touchClass')
-                    })
-                    e.addEventListener('touchend', () => {
-                        e.classList.remove('touchClass')
-                    })
-                })
-            })
-        )
-    }
+    // componentDidMount() {
+    //     this.httpApiServObj.getCovidCountStateWise().then( (d) => 
+    //         this.setState({
+    //             countryData: d.statewise.slice(0,1),
+    //             stateWiseData: d.statewise.slice(1)
+    //         }, () => {
+    //             this.myRef.map((e) => {
+    //                 e.addEventListener('touchstart', () => {
+    //                     e.classList.add('touchClass')
+    //                 })
+    //                 e.addEventListener('touchend', () => {
+    //                     e.classList.remove('touchClass')
+    //                 })
+    //             })
+    //         })
+    //     )
+    // }
 
     navigateUrl = (stateData) => {
         this.props.history.push({ pathname: `/state/${stateData.state}`, state: stateData})

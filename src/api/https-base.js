@@ -5,7 +5,7 @@ export class HttpBase {
     }
 
     getApi(endPoint) {
-        return fetch(endPoint).then( (data) =>  data.json() ).then( (response) => response)
+        return fetch(endPoint).then( (data) =>  data.json() ).then( (response) => response).catch((error) => {console.log(123)})
     }
 
 }
